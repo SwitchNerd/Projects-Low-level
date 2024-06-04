@@ -1,6 +1,1 @@
 ProjectCount = 0
-Project1:
-    Name: 
-    Description:
-    Date created: 
-Project2:
