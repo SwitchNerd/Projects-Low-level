@@ -6,7 +6,7 @@ with open('Portfolio/list.txt') as temp:
     count = int(data[15:16])
 #Intialising the variable to check if the file has changed
 modified = False
-    
+
 def write():
     #Changing modified to true, as the write command has been called
     global modified 
@@ -14,9 +14,10 @@ def write():
     #Incrementing count each time another project is added
     global count
     count = count + 1
-    
+    print('Creating a new project...')
+    time.sleep(1)
     file = open('Portfolio/list.txt', 'a')
-    file.write(f'\nProject : {count+1}')
+    file.write(f'\nProject : {count}')
     time.sleep(0.5)
     file.write(f'\nName: {input("Enter a project name: ")}')
     time.sleep(0.5)
@@ -24,8 +25,11 @@ def write():
     time.sleep(0.5)
     file.write(f'\nCreation Date: {input("Enter the date the project was created (##/##/####): ")}')
     file.close()
+    
+
 def read():
     pass
+    #Code this later pls
 
 def main():
     time.sleep(0.5)
@@ -63,8 +67,9 @@ def main():
     elif C1 == 'n':
         clear()
         write()
-        clear()
     else:
         print("ERROR : UNEXPECTED ARGUMENT :(")
-    
-main()
+        time.sleep(1)
+
+main() 
+# Create a new file with same name, everything the same exxcept the first line with the new count
