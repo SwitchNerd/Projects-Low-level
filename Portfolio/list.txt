@@ -1,1 +1,9 @@
-ProjectCount = 0
+ProjectCount = 2
+Project : 1
+Name: Hangman
+Description: A simple hangman name with a short word list, learning if statements
+Creation Date: ??/??/2022
+Project : 2
+Name: FoodOrder
+Description: An ordering food project, messing with loading animations and functions.
+Creation Date: ??/??/2022
