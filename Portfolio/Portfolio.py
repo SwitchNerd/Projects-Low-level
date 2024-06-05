@@ -28,8 +28,24 @@ def write():
     
 
 def read():
-    pass
-    #Code this later pls
+    file = open('Portfolio/list.txt','r')
+    
+    C2 = int(input("Would you like to view all exisiting projects or a specific one? (1, 2): "))
+    if C2 == 1:
+        lines = file.readlines()
+        # dont do anything to this, takes too long to fix 
+        for line in lines:
+            if 'Project' in line:
+                print('-----------------------')
+                print(line.strip())
+            else:
+                print(line.strip())
+    elif C2 == 2:
+        pass
+    else:
+        print("ERROR: UNEXPECTED ARGUMENT")
+        time.sleep(1)
+        
 
 def main():
     time.sleep(0.5)
@@ -63,13 +79,23 @@ def main():
     time.sleep(1.5)
     C1 = input("Would you like to view exisiting projects?: ")
     if C1 == 'y':
-        pass
+        clear()
+        read()
     elif C1 == 'n':
         clear()
         write()
     else:
-        print("ERROR : UNEXPECTED ARGUMENT :(")
+        print("ERROR : UNEXPECTED ARGUMENT")
         time.sleep(1)
+        
+    
+        
 
 main() 
+if modified:
+    with open("Portfolio/list.txt", "r+") as f:
+     old = f.read() # read everything in the file
+     postString = old.split("\n",1)[1]
+     f.seek(0) # rewind
+     f.write(f"ProjectCount = {count}\n" + postString) # write the new line before
 # Create a new file with same name, everything the same exxcept the first line with the new count
