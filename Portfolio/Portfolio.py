@@ -51,12 +51,12 @@ def read():
         for line in lines:
             if found:
                 if placeholder < 3:
-                    print('\n')
                     print(line.strip())
                     placeholder += 1
             if search in line:
                 found = True
                 time.sleep(0.5)
+                print('----------------------')
                 print(line.strip())
         if not found:
             print('Project has not been created before. Recheck spelling.')
