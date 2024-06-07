@@ -1,4 +1,4 @@
-ProjectCount = 2
+ProjectCount = 3
 Project : 1
 Name: Hangman
 Description: A simple hangman name with a short word list, learning if statements
@@ -7,3 +7,7 @@ Project : 2
 Name: FoodOrder
 Description: An ordering food project, messing with loading animations and functions.
 Creation Date: ??/??/2023
+Project : 3
+Name: EthTracker
+Description: Basic API usage to track ethereum prices, aswell as wallet balances, etc..
+Creation Date: 07/06/2024
