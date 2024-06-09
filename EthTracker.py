@@ -42,6 +42,6 @@ def get_account_balance():
 def get_transaction_history():
     return api_URL('account','txlist',startblock=0,endblock=9999999,page=1,offset=10000,sort='asc')
     
-print(get_account_balance())
+print(get_transaction_history())
 
 #waiting for api services to come back
